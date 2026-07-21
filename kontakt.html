@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Kontaktieren Sie die Trattoria Del Corso in Brandenburg an der Havel."
+  >
+
+  <title>Kontakt – Trattoria Del Corso</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    /* ==========================================================
+       1. GRUNDEINSTELLUNGEN
+       ========================================================== */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --cream: #f5efe6;
+      --cream-dark: #ebe0d0;
+      --terracotta: #b0533a;
+      --terracotta-dark: #8f3e29;
+      --warm-brown: #3d2b1f;
+      --light-brown: #6b4f3b;
+      --white: #ffffff;
+      --border: #d7c6b2;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      font-family: "Lato", sans-serif;
+      color: var(--warm-brown);
+      background-color: var(--cream);
+      line-height: 1.6;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: "Playfair Display", serif;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    button,
+    input,
+    textarea {
+      font: inherit;
+    }
+
+    /* ==========================================================
+       2. NAVIGATION
+       ========================================================== */
+
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 20px 0;
+      background: transparent;
+      transition:
+        background 0.3s ease,
+        padding 0.3s ease,
+        box-shadow 0.3s ease;
+    }
+
+    .header.scrolled {
+      padding: 12px 0;
+      background-color: var(--cream);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-family: "Playfair Display", serif;
+      font-size: 1.4rem;
+      color: var(--white);
+      white-space: nowrap;
+    }
+
+    .header.scrolled .logo {
+      color: var(--warm-brown);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      color: var(--white);
+      font-weight: 400;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #f0c674;
+    }
+
+    .header.scrolled .nav-links a {
+      color: var(--warm-brown);
+    }
+
+    .header.scrolled .nav-links a:hover,
+    .header.scrolled .nav-links a.active {
+      color: var(--terracotta);
+    }
+
+    .burger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      padding: 5px;
+      border: none;
+      background: none;
+      cursor: pointer;
+    }
+
+    .burger span {
+      width: 25px;
+      height: 3px;
+      background-color: var(--white);
+    }
+
+    .header.scrolled .burger span {
+      background-color: var(--warm-brown);
+    }
+
+    /* ==========================================================
+       3. KLEINER HERO
+       ========================================================== */
+
+    .contact-hero {
+      position: relative;
+      min-height: 480px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 130px 20px 70px;
+
+      color: var(--white);
+      text-align: center;
+
+      background:
+        url("/images/hero.png") center 55% / cover no-repeat;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.34);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+
+      width: 100%;
+      max-width: 850px;
+    }
+
+    .hero-sub {
+      font-family: "Great Vibes", cursive;
+      font-size: 2.7rem;
+      line-height: 1.1;
+      color: #f0c674;
+    }
+
+    .hero-title {
+      margin: 8px 0 14px;
+      font-size: 3.5rem;
+      line-height: 1.15;
+    }
+
+    .hero-text {
+      max-width: 780px;
+      margin: 0 auto;
+      font-size: 1.15rem;
+      font-weight: 300;
+    }
+
+    /* ==========================================================
+       4. HAUPTBEREICH
+       ========================================================== */
+
+    main {
+      flex: 1;
+    }
+
+    .contact-section {
+      padding: 80px 20px;
+    }
+
+    .contact-container {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 50px;
+      align-items: start;
+    }
+
+    .script-title {
+      margin-bottom: 4px;
+      font-family: "Great Vibes", cursive;
+      font-size: 2.5rem;
+      line-height: 1.2;
+      color: var(--terracotta);
+    }
+
+    .contact-info h2,
+    .contact-form-wrapper h2 {
+      margin-bottom: 20px;
+      font-size: 2.2rem;
+      line-height: 1.2;
+    }
+
+    .intro-text {
+      max-width: 480px;
+      margin-bottom: 35px;
+      color: var(--light-brown);
+    }
+
+    /* ==========================================================
+       5. KONTAKTINFORMATIONEN
+       ========================================================== */
+
+    .info-list {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    .info-item {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .info-icon {
+      width: 48px;
+      height: 48px;
+      flex-shrink: 0;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 50%;
+      background-color: var(--terracotta);
+      color: var(--white);
+      font-size: 1.15rem;
+      font-weight: 700;
+    }
+
+    .info-item h3 {
+      margin-bottom: 3px;
+      font-size: 1.15rem;
+    }
+
+    .info-item p,
+    .info-item a {
+      color: var(--light-brown);
+    }
+
+    .info-item a {
+      transition: color 0.2s ease;
+    }
+
+    .info-item a:hover {
+      color: var(--terracotta);
+    }
+
+    .opening-hours {
+      margin-top: 35px;
+      padding: 25px;
+      background-color: var(--cream-dark);
+      border-left: 4px solid var(--terracotta);
+    }
+
+    .opening-hours h3 {
+      margin-bottom: 12px;
+      color: var(--terracotta);
+    }
+
+    .hours-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+
+      padding: 7px 0;
+      border-bottom: 1px solid rgba(61, 43, 31, 0.12);
+    }
+
+    .hours-row:last-child {
+      border-bottom: none;
+    }
+
+    /* ==========================================================
+       6. FORMULAR
+       ========================================================== */
+
+    .contact-form-wrapper {
+      padding: 40px;
+      border-radius: 8px;
+      background-color: var(--white);
+      box-shadow: 0 15px 40px rgba(61, 43, 31, 0.12);
+    }
+
+    .contact-form {
+      margin-top: 25px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 7px;
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+
+    .required {
+      color: var(--terracotta);
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 14px 15px;
+
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      outline: none;
+
+      color: var(--warm-brown);
+      background-color: #fffdf9;
+
+      transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
+    }
+
+    .form-group textarea {
+      min-height: 160px;
+      resize: vertical;
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: #a59484;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: var(--terracotta);
+      background-color: var(--white);
+      box-shadow: 0 0 0 3px rgba(176, 83, 58, 0.12);
+    }
+
+    .privacy-check {
+      margin-bottom: 22px;
+
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+
+    .privacy-check input {
+      width: auto;
+      margin-top: 5px;
+      accent-color: var(--terracotta);
+    }
+
+    .privacy-check label {
+      font-size: 0.88rem;
+      color: var(--light-brown);
+    }
+
+    .privacy-check a {
+      color: var(--terracotta);
+      text-decoration: underline;
+    }
+
+    .submit-button {
+      width: 100%;
+      padding: 15px 25px;
+
+      border: none;
+      border-radius: 4px;
+
+      background-color: var(--terracotta);
+      color: var(--white);
+
+      font-weight: 700;
+      letter-spacing: 0.6px;
+
+      cursor: pointer;
+
+      transition:
+        background-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    .submit-button:hover {
+      background-color: var(--terracotta-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 18px rgba(143, 62, 41, 0.25);
+    }
+
+    .submit-button:active {
+      transform: translateY(0);
+    }
+
+    /* ==========================================================
+       7. ANFAHRT
+       ========================================================== */
+
+    .location-section {
+      padding: 70px 20px;
+      background-color: var(--cream-dark);
+      text-align: center;
+    }
+
+    .location-container {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .location-section h2 {
+      margin-bottom: 25px;
+      font-size: 2.3rem;
+    }
+
+    .map-placeholder {
+      min-height: 300px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 30px;
+
+      border-radius: 8px;
+
+      background:
+        linear-gradient(
+          rgba(61, 43, 31, 0.72),
+          rgba(61, 43, 31, 0.72)
+        ),
+        url("/images/innen1.png") center / cover no-repeat;
+
+      color: var(--white);
+    }
+
+    .map-content {
+      max-width: 520px;
+    }
+
+    .map-content h3 {
+      margin-bottom: 10px;
+      font-size: 1.7rem;
+    }
+
+    .map-content p {
+      margin-bottom: 20px;
+    }
+
+    .route-button {
+      display: inline-block;
+      padding: 12px 26px;
+
+      border: 1px solid var(--white);
+      border-radius: 4px;
+
+      color: var(--white);
+
+      transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+    }
+
+    .route-button:hover {
+      background-color: var(--white);
+      color: var(--warm-brown);
+    }
+
+    /* ==========================================================
+       8. FOOTER
+       ========================================================== */
+
+    .footer {
+      padding: 30px 20px;
+      background-color: var(--warm-brown);
+      color: var(--cream);
+      text-align: center;
+    }
+
+    .footer-content {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .footer-title {
+      margin-bottom: 8px;
+      font-family: "Playfair Display", serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+    }
+
+    .footer-links {
+      margin-top: 12px;
+
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+
+      font-size: 0.9rem;
+    }
+
+    .footer-links a {
+      color: #dbcdbf;
+      transition: color 0.2s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--white);
+    }
+
+    /* ==========================================================
+       9. RESPONSIVE
+       ========================================================== */
+
+    @media (max-width: 850px) {
+      .contact-container {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-info {
+        max-width: 650px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .header {
+        padding: 16px 0;
+      }
+
+      .header.scrolled {
+        padding: 10px 0;
+      }
+
+      .logo {
+        font-size: 1.15rem;
+      }
+
+      .burger {
+        display: flex;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 100%;
+        right: 15px;
+
+        width: min(260px, calc(100% - 30px));
+
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+
+        overflow: hidden;
+
+        border-radius: 0 0 6px 6px;
+        background-color: var(--cream);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links li {
+        width: 100%;
+      }
+
+      .nav-links a,
+      .header.scrolled .nav-links a {
+        width: 100%;
+        display: block;
+
+        padding: 14px 20px;
+
+        color: var(--warm-brown);
+        border-bottom: 1px solid rgba(61, 43, 31, 0.1);
+      }
+
+      .nav-links a:hover,
+      .nav-links a.active,
+      .header.scrolled .nav-links a:hover,
+      .header.scrolled .nav-links a.active {
+        color: var(--terracotta);
+      }
+
+      .contact-hero {
+        min-height: 390px;
+        padding: 110px 20px 55px;
+        background-position: center;
+      }
+
+      .hero-sub {
+        font-size: 2.2rem;
+      }
+
+      .hero-title {
+        font-size: 2.7rem;
+      }
+
+      .hero-text {
+        max-width: 580px;
+        font-size: 1rem;
+      }
+
+      .contact-section {
+        padding: 60px 18px;
+      }
+
+      .contact-form-wrapper {
+        padding: 28px 20px;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      .hours-row {
+        flex-direction: column;
+        gap: 0;
+      }
+    }
+
+    @media (max-width: 450px) {
+      .contact-hero {
+        min-height: 360px;
+        padding-top: 100px;
+      }
+
+      .hero-sub {
+        font-size: 2rem;
+      }
+
+      .hero-title {
+        font-size: 2.35rem;
+      }
+
+      .hero-text {
+        font-size: 0.95rem;
+      }
+
+      .script-title {
+        font-size: 2.1rem;
+      }
+
+      .contact-info h2,
+      .contact-form-wrapper h2 {
+        font-size: 1.8rem;
+      }
+
+      .info-icon {
+        width: 42px;
+        height: 42px;
+      }
+
+      .footer-links {
+        flex-direction: column;
+        gap: 6px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <header class="header" id="header">
+
+    <nav class="nav">
+
+      <a href="index.html#home" class="logo">
+        Trattoria Del Corso
+      </a>
+
+      <button
+        class="burger"
+        id="burger"
+        type="button"
+        aria-label="Menü öffnen"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li>
+          <a href="index.html#home">Home</a>
+        </li>
+
+        <li>
+          <a href="index.html#willkommen">Willkommen</a>
+        </li>
+
+        <li>
+          <a href="index.html#menu">Menü</a>
+        </li>
+
+        <li>
+          <a href="index.html#galerie">Galerie</a>
+        </li>
+
+        <li>
+          <a href="kontakt.html" class="active">Kontakt</a>
+        </li>
+      </ul>
+
+    </nav>
+
+  </header>
+
+  <main>
+
+    <!-- Kleiner Hero -->
+    <section class="contact-hero">
+
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+
+        <p class="hero-sub">Parliamo</p>
+
+        <h1 class="hero-title">Kontakt</h1>
+
+        <p class="hero-text">
+          Sie möchten einen Tisch reservieren oder haben eine Frage?
+          Schreiben Sie uns – wir freuen uns auf Ihre Nachricht.
+        </p>
+
+      </div>
+
+    </section>
+
+    <!-- Kontaktbereich -->
+    <section class="contact-section">
+
+      <div class="contact-container">
+
+        <!-- Kontaktdaten -->
+        <div class="contact-info">
+
+          <p class="script-title">Besuchen Sie uns</p>
+
+          <h2>Ein Stück Sizilien in Brandenburg</h2>
+
+          <p class="intro-text">
+            Genießen Sie italienische Gastfreundschaft, traditionelle
+            Gerichte und einen entspannten Abend in unserer Trattoria.
+          </p>
+
+          <div class="info-list">
+
+            <div class="info-item">
+
+              <div class="info-icon">⌖</div>
+
+              <div>
+                <h3>Adresse</h3>
+
+                <p>
+                  Steinstraße 50<br>
+                  14776 Brandenburg an der Havel
+                </p>
+              </div>
+
+            </div>
+
+            <div class="info-item">
+
+              <div class="info-icon">☎</div>
+
+              <div>
+                <h3>Telefon</h3>
+
+                <a href="tel:+49331123456">
+                  0331 / 123 456
+                </a>
+              </div>
+
+            </div>
+
+            <div class="info-item">
+
+              <div class="info-icon">✉</div>
+
+              <div>
+                <h3>E-Mail</h3>
+
+                <a href="mailto:info@trattoria-del-corso.de">
+                  info@trattoria-del-corso.de
+                </a>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="opening-hours">
+
+            <h3>Öffnungszeiten</h3>
+
+            <div class="hours-row">
+              <span>Montag</span>
+              <strong>Ruhetag</strong>
+            </div>
+
+            <div class="hours-row">
+              <span>Dienstag – Sonntag</span>
+              <strong>12:00 – 22:00 Uhr</strong>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Kontaktformular -->
+        <div class="contact-form-wrapper">
+
+          <p class="script-title">Schreiben Sie uns</p>
+
+          <h2>Ihre Nachricht</h2>
+
+          <form
+            class="contact-form"
+            action="#"
+            method="post"
+          >
+
+            <div class="form-row">
+
+              <div class="form-group">
+
+                <label for="vorname">
+                  Vorname
+                  <span class="required">*</span>
+                </label>
+
+                <input
+                  type="text"
+                  id="vorname"
+                  name="vorname"
+                  placeholder="Ihr Vorname"
+                  autocomplete="given-name"
+                  required
+                >
+
+              </div>
+
+              <div class="form-group">
+
+                <label for="nachname">
+                  Nachname
+                </label>
+
+                <input
+                  type="text"
+                  id="nachname"
+                  name="nachname"
+                  placeholder="Ihr Nachname"
+                  autocomplete="family-name"
+                >
+
+              </div>
+
+            </div>
+
+            <div class="form-group">
+
+              <label for="email">
+                E-Mail-Adresse
+                <span class="required">*</span>
+              </label>
+
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="name@beispiel.de"
+                autocomplete="email"
+                required
+              >
+
+            </div>
+
+            <div class="form-group">
+
+              <label for="telefon">
+                Telefonnummer
+              </label>
+
+              <input
+                type="tel"
+                id="telefon"
+                name="telefon"
+                placeholder="Ihre Telefonnummer"
+                autocomplete="tel"
+              >
+
+            </div>
+
+            <div class="form-group">
+
+              <label for="betreff">
+                Betreff
+              </label>
+
+              <input
+                type="text"
+                id="betreff"
+                name="betreff"
+                placeholder="Worum geht es?"
+              >
+
+            </div>
+
+            <div class="form-group">
+
+              <label for="nachricht">
+                Nachricht
+                <span class="required">*</span>
+              </label>
+
+              <textarea
+                id="nachricht"
+                name="nachricht"
+                placeholder="Schreiben Sie hier Ihre Nachricht ..."
+                required
+              ></textarea>
+
+            </div>
+
+            <div class="privacy-check">
+
+              <input
+                type="checkbox"
+                id="datenschutz"
+                name="datenschutz"
+                required
+              >
+
+              <label for="datenschutz">
+                Ich habe die
+                <a href="datenschutz.html">Datenschutzerklärung</a>
+                gelesen und stimme der Verarbeitung meiner Daten zu.
+              </label>
+
+            </div>
+
+            <button
+              class="submit-button"
+              type="submit"
+            >
+              Nachricht senden
+            </button>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Anfahrt -->
+    <section class="location-section">
+
+      <div class="location-container">
+
+        <p class="script-title">So finden Sie uns</p>
+
+        <h2>Mitten in Brandenburg</h2>
+
+        <div class="map-placeholder">
+
+          <div class="map-content">
+
+            <h3>Trattoria Del Corso</h3>
+
+            <p>
+              Steinstraße 50<br>
+              14776 Brandenburg an der Havel
+            </p>
+
+            <a
+              class="route-button"
+              href="https://www.google.com/maps/place/Trattoria+Del+Corso/@52.4067352,12.5574264,17z/data=!3m1!4b1!4m6!3m5!1s0x47a8c0590a9b38e3:0x7ce6bd10c8890bc!8m2!3d52.4067352!4d12.5600013!16s%2Fg%2F11g9dpbc3q?entry=ttu&g_ep=EgoyMDI2MDcxNS4wIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Route planen
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+
+    <div class="footer-content">
+
+      <p class="footer-title">
+        Trattoria Del Corso
+      </p>
+
+      <p>
+        &copy; 2026 Trattoria Del Corso. Alle Rechte vorbehalten.
+      </p>
+
+      <div class="footer-links">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </div>
+
+    </div>
+
+  </footer>
+
+  <script>
+    const header = document.getElementById("header");
+    const burger = document.getElementById("burger");
+    const navLinks = document.getElementById("nav-links");
+    const menuLinks = navLinks.querySelectorAll("a");
+
+    function checkScroll() {
+      if (window.scrollY > 40) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+    }
+
+    checkScroll();
+
+    window.addEventListener("scroll", checkScroll);
+
+    burger.addEventListener("click", function () {
+      navLinks.classList.toggle("open");
+
+      const menuIsOpen = navLinks.classList.contains("open");
+
+      burger.setAttribute("aria-expanded", menuIsOpen);
+    });
+
+    menuLinks.forEach(function (link) {
+      link.addEventListener("click", function () {
+        navLinks.classList.remove("open");
+        burger.setAttribute("aria-expanded", "false");
+      });
+    });
+  </script>
+
+</body>
+</html>

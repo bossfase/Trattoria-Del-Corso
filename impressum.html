@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Impressum der Trattoria Del Corso in Brandenburg an der Havel."
+  >
+
+  <title>Impressum – Trattoria Del Corso</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    /* ==========================================================
+       1. GRUNDEINSTELLUNGEN
+       ========================================================== */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --cream: #f5efe6;
+      --cream-dark: #ebe0d0;
+      --terracotta: #b0533a;
+      --terracotta-dark: #8f3e29;
+      --warm-brown: #3d2b1f;
+      --light-brown: #6b4f3b;
+      --white: #ffffff;
+      --border: #d7c6b2;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      font-family: "Lato", sans-serif;
+      color: var(--warm-brown);
+      background-color: var(--cream);
+      line-height: 1.6;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: "Playfair Display", serif;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    /* ==========================================================
+       2. NAVIGATION
+       ========================================================== */
+
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+
+      padding: 20px 0;
+
+      background: transparent;
+
+      transition:
+        background 0.3s ease,
+        padding 0.3s ease,
+        box-shadow 0.3s ease;
+    }
+
+    .header.scrolled {
+      padding: 12px 0;
+
+      background-color: var(--cream);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-family: "Playfair Display", serif;
+      font-size: 1.4rem;
+      color: var(--white);
+      white-space: nowrap;
+    }
+
+    .header.scrolled .logo {
+      color: var(--warm-brown);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      color: var(--white);
+      font-weight: 400;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: #f0c674;
+    }
+
+    .header.scrolled .nav-links a {
+      color: var(--warm-brown);
+    }
+
+    .header.scrolled .nav-links a:hover {
+      color: var(--terracotta);
+    }
+
+    .burger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+
+      padding: 5px;
+
+      border: none;
+      background: none;
+      cursor: pointer;
+    }
+
+    .burger span {
+      width: 25px;
+      height: 3px;
+      background-color: var(--white);
+    }
+
+    .header.scrolled .burger span {
+      background-color: var(--warm-brown);
+    }
+
+    /* ==========================================================
+       3. KLEINER HERO
+       ========================================================== */
+
+    .impressum-hero {
+      position: relative;
+      min-height: 390px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 125px 20px 60px;
+
+      background:
+        url("/images/hero.png") center 55% / cover no-repeat;
+
+      color: var(--white);
+      text-align: center;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.38);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+
+      width: 100%;
+      max-width: 800px;
+    }
+
+    .hero-sub {
+      font-family: "Great Vibes", cursive;
+      font-size: 2.5rem;
+      line-height: 1.1;
+      color: #f0c674;
+    }
+
+    .hero-title {
+      margin-top: 8px;
+      font-size: 3.4rem;
+      line-height: 1.15;
+    }
+
+    /* ==========================================================
+       4. IMPRESSUM
+       ========================================================== */
+
+    main {
+      flex: 1;
+    }
+
+    .impressum-section {
+      position: relative;
+      overflow: hidden;
+
+      padding: 80px 20px;
+
+      background:
+        radial-gradient(
+          circle at top right,
+          rgba(176, 83, 58, 0.09),
+          transparent 30%
+        ),
+        var(--cream);
+    }
+
+    .impressum-container {
+      width: 100%;
+      max-width: 950px;
+      margin: 0 auto;
+    }
+
+    .section-heading {
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .script-title {
+      font-family: "Great Vibes", cursive;
+      font-size: 2.5rem;
+      line-height: 1.2;
+      color: var(--terracotta);
+    }
+
+    .section-heading h2 {
+      margin-top: 5px;
+      font-size: 2.5rem;
+    }
+
+    .impressum-card {
+      position: relative;
+
+      padding: 45px;
+
+      border: 1px solid rgba(61, 43, 31, 0.08);
+      border-radius: 16px;
+
+      background: rgba(255, 255, 255, 0.78);
+
+      box-shadow:
+        0 18px 45px rgba(61, 43, 31, 0.11);
+    }
+
+    .impressum-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 6px;
+
+      border-radius: 16px 16px 0 0;
+
+      background:
+        linear-gradient(
+          90deg,
+          var(--terracotta),
+          #d78a66,
+          var(--terracotta)
+        );
+    }
+
+    .impressum-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+
+    .info-box {
+      padding: 24px;
+
+      border-radius: 10px;
+      background-color: var(--cream-dark);
+      border-left: 4px solid var(--terracotta);
+
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+
+    .info-box:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 22px rgba(61, 43, 31, 0.10);
+    }
+
+    .info-box.full-width {
+      grid-column: 1 / -1;
+    }
+
+    .info-box h3 {
+      margin-bottom: 8px;
+
+      color: var(--terracotta);
+      font-size: 1.15rem;
+    }
+
+    .info-box p,
+    .info-box address {
+      color: var(--light-brown);
+      font-style: normal;
+    }
+
+    .info-box a {
+      color: var(--light-brown);
+      word-break: break-word;
+      transition: color 0.2s ease;
+    }
+
+    .info-box a:hover {
+      color: var(--terracotta);
+    }
+
+    .notice {
+      margin-top: 30px;
+      padding: 20px 24px;
+
+      border-radius: 10px;
+
+      background-color: rgba(176, 83, 58, 0.08);
+      color: var(--light-brown);
+
+      font-size: 0.92rem;
+    }
+
+    /* ==========================================================
+       5. FOOTER
+       ========================================================== */
+
+    .footer {
+      padding: 30px 20px;
+
+      background-color: var(--warm-brown);
+      color: var(--cream);
+
+      text-align: center;
+    }
+
+    .footer-content {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .footer-title {
+      margin-bottom: 8px;
+
+      font-family: "Playfair Display", serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+    }
+
+    .footer-links {
+      margin-top: 12px;
+
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+
+      font-size: 0.9rem;
+    }
+
+    .footer-links a {
+      color: #dbcdbf;
+      transition: color 0.2s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--white);
+    }
+
+    /* ==========================================================
+       6. RESPONSIVE
+       ========================================================== */
+
+    @media (max-width: 768px) {
+      .header {
+        padding: 16px 0;
+      }
+
+      .header.scrolled {
+        padding: 10px 0;
+      }
+
+      .logo {
+        font-size: 1.15rem;
+      }
+
+      .burger {
+        display: flex;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 100%;
+        right: 15px;
+
+        width: min(260px, calc(100% - 30px));
+
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+
+        overflow: hidden;
+
+        border-radius: 0 0 6px 6px;
+        background-color: var(--cream);
+
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links li {
+        width: 100%;
+      }
+
+      .nav-links a,
+      .header.scrolled .nav-links a {
+        width: 100%;
+        display: block;
+
+        padding: 14px 20px;
+
+        color: var(--warm-brown);
+
+        border-bottom: 1px solid rgba(61, 43, 31, 0.1);
+      }
+
+      .nav-links a:hover,
+      .header.scrolled .nav-links a:hover {
+        color: var(--terracotta);
+      }
+
+      .impressum-hero {
+        min-height: 340px;
+        padding: 105px 20px 50px;
+      }
+
+      .hero-sub {
+        font-size: 2.1rem;
+      }
+
+      .hero-title {
+        font-size: 2.7rem;
+      }
+
+      .impressum-section {
+        padding: 60px 18px;
+      }
+
+      .impressum-card {
+        padding: 28px 20px;
+      }
+
+      .impressum-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .info-box.full-width {
+        grid-column: auto;
+      }
+
+      .section-heading h2 {
+        font-size: 2rem;
+      }
+    }
+
+    @media (max-width: 450px) {
+      .impressum-hero {
+        min-height: 310px;
+      }
+
+      .hero-title {
+        font-size: 2.35rem;
+      }
+
+      .script-title {
+        font-size: 2.1rem;
+      }
+
+      .info-box {
+        padding: 20px;
+      }
+
+      .footer-links {
+        flex-direction: column;
+        gap: 6px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <header class="header" id="header">
+
+    <nav class="nav">
+
+      <a href="index.html#home" class="logo">
+        Trattoria Del Corso
+      </a>
+
+      <button
+        class="burger"
+        id="burger"
+        type="button"
+        aria-label="Menü öffnen"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li>
+          <a href="index.html#home">Home</a>
+        </li>
+
+        <li>
+          <a href="index.html#willkommen">Willkommen</a>
+        </li>
+
+        <li>
+          <a href="index.html#menu">Menü</a>
+        </li>
+
+        <li>
+          <a href="index.html#galerie">Galerie</a>
+        </li>
+
+        <li>
+          <a href="kontakt.html">Kontakt</a>
+        </li>
+      </ul>
+
+    </nav>
+
+  </header>
+
+  <main>
+
+    <!-- Kleiner Hero -->
+    <section class="impressum-hero">
+
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <p class="hero-sub">Informazioni legali</p>
+        <h1 class="hero-title">Impressum</h1>
+      </div>
+
+    </section>
+
+    <!-- Impressum-Inhalt -->
+    <section class="impressum-section">
+
+      <div class="impressum-container">
+
+        <div class="section-heading">
+          <p class="script-title">Trattoria Del Corso</p>
+          <h2>Rechtliche Angaben</h2>
+        </div>
+
+        <div class="impressum-card">
+
+          <div class="impressum-grid">
+
+            <div class="info-box">
+              <h3>Herausgeber</h3>
+
+              <p>
+                Trattoria Del Corso
+              </p>
+            </div>
+
+            <div class="info-box">
+              <h3>Geschäftsführung</h3>
+
+              <p>
+                G. Collo
+              </p>
+            </div>
+
+            <div class="info-box full-width">
+              <h3>Postanschrift</h3>
+
+              <address>
+                Trattoria Del Corso<br>
+                Steinstraße 50<br>
+                14776 Brandenburg an der Havel
+              </address>
+            </div>
+
+            <div class="info-box">
+              <h3>Telefon</h3>
+
+              <p>
+                <a href="tel:+4933813279801">
+                  +49 (0) 3381 – 3279801
+                </a>
+              </p>
+
+              <p>
+                Erreichbar Mo.–So.:<br>
+                11:00 bis 22:00 Uhr
+              </p>
+            </div>
+
+            <div class="info-box">
+              <h3>Fax</h3>
+
+              <p>
+                +49 (0) 3381 – 3279802
+              </p>
+            </div>
+
+            <div class="info-box">
+              <h3>E-Mail</h3>
+
+              <p>
+                <a href="mailto:delcorso2013@gmail.com">
+                  delcorso2013@gmail.com
+                </a>
+              </p>
+            </div>
+
+            <div class="info-box">
+              <h3>Website</h3>
+
+              <p>
+                <a
+                  href="http://www.delcorso-brandenburg.de.tl"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  www.delcorso-brandenburg.de.tl
+                </a>
+              </p>
+            </div>
+
+            <div class="info-box">
+              <h3>USt-IdNr.</h3>
+
+              <p>
+                Nicht angegeben
+              </p>
+            </div>
+
+            <div class="info-box">
+              <h3>Webmaster</h3>
+
+              <p>
+                S. Grubert
+              </p>
+            </div>
+
+          </div>
+
+          <div class="notice">
+            Alle Angaben wurden nach bestem Wissen erstellt.
+            Änderungen und Irrtümer bleiben vorbehalten.
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+
+    <div class="footer-content">
+
+      <p class="footer-title">
+        Trattoria Del Corso
+      </p>
+
+      <p>
+        &copy; 2026 Trattoria Del Corso. Alle Rechte vorbehalten.
+      </p>
+
+      <div class="footer-links">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </div>
+
+    </div>
+
+  </footer>
+
+  <script>
+    const header = document.getElementById("header");
+    const burger = document.getElementById("burger");
+    const navLinks = document.getElementById("nav-links");
+    const menuLinks = navLinks.querySelectorAll("a");
+
+    function checkScroll() {
+      if (window.scrollY > 40) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+    }
+
+    checkScroll();
+
+    window.addEventListener("scroll", checkScroll);
+
+    burger.addEventListener("click", function () {
+      navLinks.classList.toggle("open");
+
+      const menuIsOpen = navLinks.classList.contains("open");
+
+      burger.setAttribute("aria-expanded", menuIsOpen);
+    });
+
+    menuLinks.forEach(function (link) {
+      link.addEventListener("click", function () {
+        navLinks.classList.remove("open");
+        burger.setAttribute("aria-expanded", "false");
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,1318 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Datenschutzerklärung der Trattoria Del Corso in Brandenburg an der Havel."
+  >
+
+  <title>Datenschutz – Trattoria Del Corso</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    /* ==========================================================
+       1. GRUNDEINSTELLUNGEN
+       ========================================================== */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --cream: #f5efe6;
+      --cream-dark: #ebe0d0;
+      --terracotta: #b0533a;
+      --terracotta-dark: #8f3e29;
+      --warm-brown: #3d2b1f;
+      --light-brown: #6b4f3b;
+      --white: #ffffff;
+      --border: #d7c6b2;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+
+      font-family: "Lato", sans-serif;
+      color: var(--warm-brown);
+      background-color: var(--cream);
+
+      line-height: 1.7;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: "Playfair Display", serif;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    /* ==========================================================
+       2. NAVIGATION
+       ========================================================== */
+
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+
+      width: 100%;
+      padding: 20px 0;
+
+      background: transparent;
+
+      transition:
+        background 0.3s ease,
+        padding 0.3s ease,
+        box-shadow 0.3s ease;
+    }
+
+    .header.scrolled {
+      padding: 12px 0;
+
+      background-color: var(--cream);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav {
+      width: 100%;
+      max-width: 1100px;
+
+      margin: 0 auto;
+      padding: 0 20px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-family: "Playfair Display", serif;
+      font-size: 1.4rem;
+      color: var(--white);
+      white-space: nowrap;
+    }
+
+    .header.scrolled .logo {
+      color: var(--warm-brown);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      color: var(--white);
+      font-weight: 400;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: #f0c674;
+    }
+
+    .header.scrolled .nav-links a {
+      color: var(--warm-brown);
+    }
+
+    .header.scrolled .nav-links a:hover {
+      color: var(--terracotta);
+    }
+
+    .burger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+
+      padding: 5px;
+
+      border: none;
+      background: none;
+      cursor: pointer;
+    }
+
+    .burger span {
+      width: 25px;
+      height: 3px;
+      background-color: var(--white);
+    }
+
+    .header.scrolled .burger span {
+      background-color: var(--warm-brown);
+    }
+
+    /* ==========================================================
+       3. KLEINER HERO
+       ========================================================== */
+
+    .privacy-hero {
+      position: relative;
+      min-height: 390px;
+
+      padding: 125px 20px 60px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background:
+        url("/images/hero.png") center 55% / cover no-repeat;
+
+      color: var(--white);
+      text-align: center;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+
+      width: 100%;
+      max-width: 850px;
+    }
+
+    .hero-sub {
+      font-family: "Great Vibes", cursive;
+      font-size: 2.5rem;
+      line-height: 1.1;
+      color: #f0c674;
+    }
+
+    .hero-title {
+      margin: 8px 0 12px;
+      font-size: 3.4rem;
+      line-height: 1.15;
+    }
+
+    .hero-text {
+      max-width: 650px;
+      margin: 0 auto;
+
+      font-size: 1.05rem;
+      font-weight: 300;
+    }
+
+    /* ==========================================================
+       4. DATENSCHUTZ-INHALT
+       ========================================================== */
+
+    main {
+      flex: 1;
+    }
+
+    .privacy-section {
+      position: relative;
+      overflow: hidden;
+
+      padding: 80px 20px;
+
+      background:
+        radial-gradient(
+          circle at top right,
+          rgba(176, 83, 58, 0.09),
+          transparent 30%
+        ),
+        var(--cream);
+    }
+
+    .privacy-container {
+      width: 100%;
+      max-width: 950px;
+      margin: 0 auto;
+    }
+
+    .section-heading {
+      max-width: 720px;
+      margin: 0 auto 45px;
+      text-align: center;
+    }
+
+    .script-title {
+      font-family: "Great Vibes", cursive;
+      font-size: 2.5rem;
+      line-height: 1.2;
+      color: var(--terracotta);
+    }
+
+    .section-heading h2 {
+      margin: 5px 0 15px;
+      font-size: 2.5rem;
+    }
+
+    .section-heading p:last-child {
+      color: var(--light-brown);
+    }
+
+    /* Inhaltsübersicht */
+
+    .privacy-navigation {
+      margin-bottom: 35px;
+      padding: 25px 30px;
+
+      border-radius: 14px;
+      background-color: var(--warm-brown);
+      color: var(--cream);
+
+      box-shadow: 0 14px 35px rgba(61, 43, 31, 0.16);
+    }
+
+    .privacy-navigation h3 {
+      margin-bottom: 15px;
+      font-size: 1.25rem;
+    }
+
+    .privacy-navigation ul {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px 25px;
+    }
+
+    .privacy-navigation a {
+      color: #e7d7c7;
+      font-size: 0.94rem;
+      transition: color 0.2s ease;
+    }
+
+    .privacy-navigation a::before {
+      content: "→";
+      margin-right: 8px;
+      color: #f0c674;
+    }
+
+    .privacy-navigation a:hover {
+      color: var(--white);
+    }
+
+    /* Datenschutz-Karten */
+
+    .privacy-card {
+      margin-bottom: 24px;
+      padding: 32px;
+
+      border: 1px solid rgba(61, 43, 31, 0.08);
+      border-radius: 14px;
+      border-left: 5px solid var(--terracotta);
+
+      background: rgba(255, 255, 255, 0.78);
+
+      box-shadow: 0 10px 30px rgba(61, 43, 31, 0.07);
+    }
+
+    .privacy-card h2 {
+      margin-bottom: 16px;
+
+      color: var(--warm-brown);
+      font-size: 1.55rem;
+      line-height: 1.3;
+    }
+
+    .privacy-card h3 {
+      margin: 22px 0 8px;
+
+      color: var(--terracotta);
+      font-size: 1.08rem;
+    }
+
+    .privacy-card p {
+      margin-bottom: 13px;
+      color: var(--light-brown);
+    }
+
+    .privacy-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .privacy-card ul {
+      margin: 10px 0 15px;
+    }
+
+    .privacy-card li {
+      position: relative;
+
+      margin-bottom: 8px;
+      padding-left: 22px;
+
+      color: var(--light-brown);
+    }
+
+    .privacy-card li::before {
+      content: "•";
+
+      position: absolute;
+      left: 5px;
+
+      color: var(--terracotta);
+      font-weight: 700;
+    }
+
+    .privacy-card address {
+      color: var(--light-brown);
+      font-style: normal;
+    }
+
+    .privacy-card a {
+      color: var(--terracotta);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      word-break: break-word;
+    }
+
+    .privacy-card a:hover {
+      color: var(--terracotta-dark);
+    }
+
+    .highlight-box {
+      margin-top: 18px;
+      padding: 18px 20px;
+
+      border-radius: 9px;
+      background-color: var(--cream-dark);
+      color: var(--light-brown);
+    }
+
+    .warning-box {
+      margin-bottom: 30px;
+      padding: 22px 25px;
+
+      border-radius: 12px;
+      border: 1px solid rgba(176, 83, 58, 0.2);
+
+      background-color: rgba(176, 83, 58, 0.08);
+      color: var(--light-brown);
+    }
+
+    .warning-box strong {
+      color: var(--terracotta);
+    }
+
+    .last-updated {
+      margin-top: 35px;
+      color: var(--light-brown);
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    /* ==========================================================
+       5. FOOTER
+       ========================================================== */
+
+    .footer {
+      padding: 30px 20px;
+
+      background-color: var(--warm-brown);
+      color: var(--cream);
+
+      text-align: center;
+    }
+
+    .footer-content {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .footer-title {
+      margin-bottom: 8px;
+
+      font-family: "Playfair Display", serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+    }
+
+    .footer-links {
+      margin-top: 12px;
+
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+
+      font-size: 0.9rem;
+    }
+
+    .footer-links a {
+      color: #dbcdbf;
+      transition: color 0.2s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--white);
+    }
+
+    /* ==========================================================
+       6. RESPONSIVE
+       ========================================================== */
+
+    @media (max-width: 768px) {
+      .header {
+        padding: 16px 0;
+      }
+
+      .header.scrolled {
+        padding: 10px 0;
+      }
+
+      .logo {
+        font-size: 1.15rem;
+      }
+
+      .burger {
+        display: flex;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 100%;
+        right: 15px;
+
+        width: min(260px, calc(100% - 30px));
+
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+
+        overflow: hidden;
+
+        border-radius: 0 0 6px 6px;
+        background-color: var(--cream);
+
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links li {
+        width: 100%;
+      }
+
+      .nav-links a,
+      .header.scrolled .nav-links a {
+        width: 100%;
+        display: block;
+
+        padding: 14px 20px;
+
+        color: var(--warm-brown);
+        border-bottom: 1px solid rgba(61, 43, 31, 0.1);
+      }
+
+      .nav-links a:hover,
+      .header.scrolled .nav-links a:hover {
+        color: var(--terracotta);
+      }
+
+      .privacy-hero {
+        min-height: 340px;
+        padding: 105px 20px 50px;
+      }
+
+      .hero-sub {
+        font-size: 2.1rem;
+      }
+
+      .hero-title {
+        font-size: 2.6rem;
+      }
+
+      .hero-text {
+        font-size: 0.98rem;
+      }
+
+      .privacy-section {
+        padding: 60px 18px;
+      }
+
+      .privacy-navigation {
+        padding: 22px 20px;
+      }
+
+      .privacy-navigation ul {
+        grid-template-columns: 1fr;
+      }
+
+      .privacy-card {
+        padding: 25px 20px;
+      }
+
+      .privacy-card h2 {
+        font-size: 1.35rem;
+      }
+
+      .section-heading h2 {
+        font-size: 2rem;
+      }
+    }
+
+    @media (max-width: 450px) {
+      .privacy-hero {
+        min-height: 310px;
+      }
+
+      .hero-title {
+        font-size: 2.25rem;
+      }
+
+      .script-title {
+        font-size: 2.1rem;
+      }
+
+      .footer-links {
+        flex-direction: column;
+        gap: 6px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <header class="header" id="header">
+
+    <nav class="nav">
+
+      <a href="index.html#home" class="logo">
+        Trattoria Del Corso
+      </a>
+
+      <button
+        class="burger"
+        id="burger"
+        type="button"
+        aria-label="Menü öffnen"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li>
+          <a href="index.html#home">Home</a>
+        </li>
+
+        <li>
+          <a href="index.html#willkommen">Willkommen</a>
+        </li>
+
+        <li>
+          <a href="index.html#menu">Menü</a>
+        </li>
+
+        <li>
+          <a href="index.html#galerie">Galerie</a>
+        </li>
+
+        <li>
+          <a href="kontakt.html">Kontakt</a>
+        </li>
+      </ul>
+
+    </nav>
+
+  </header>
+
+  <main>
+
+    <!-- Kleiner Hero -->
+    <section class="privacy-hero">
+
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <p class="hero-sub">La vostra privacy</p>
+
+        <h1 class="hero-title">
+          Datenschutzerklärung
+        </h1>
+
+        <p class="hero-text">
+          Informationen darüber, wie wir personenbezogene Daten
+          auf unserer Website verarbeiten.
+        </p>
+      </div>
+
+    </section>
+
+    <!-- Datenschutz-Inhalt -->
+    <section class="privacy-section">
+
+      <div class="privacy-container">
+
+        <div class="section-heading">
+          <p class="script-title">Trattoria Del Corso</p>
+
+          <h2>Ihre Daten sind uns wichtig</h2>
+
+          <p>
+            In dieser Datenschutzerklärung informieren wir Sie über
+            die Verarbeitung personenbezogener Daten beim Besuch
+            unserer Website und bei der Kontaktaufnahme.
+          </p>
+        </div>
+
+        <div class="warning-box">
+          <strong>Hinweis für den Betreiber:</strong>
+          Bitte ergänzen Sie vor der Veröffentlichung den tatsächlichen
+          Hosting-Anbieter und überprüfen Sie, ob weitere Dienste wie
+          Google Analytics, Instagram, Facebook, Reservierungssysteme
+          oder eingebettete Karten verwendet werden.
+        </div>
+
+        <!-- Inhaltsübersicht -->
+        <nav
+          class="privacy-navigation"
+          aria-label="Inhaltsübersicht der Datenschutzerklärung"
+        >
+          <h3>Inhalt</h3>
+
+          <ul>
+            <li>
+              <a href="#verantwortlicher">Verantwortlicher</a>
+            </li>
+
+            <li>
+              <a href="#hosting">Hosting und Serverdaten</a>
+            </li>
+
+            <li>
+              <a href="#kontakt">Kontaktaufnahme</a>
+            </li>
+
+            <li>
+              <a href="#formular">Kontaktformular</a>
+            </li>
+
+            <li>
+              <a href="#fonts">Google Fonts</a>
+            </li>
+
+            <li>
+              <a href="#cookies">Cookies</a>
+            </li>
+
+            <li>
+              <a href="#links">Externe Links</a>
+            </li>
+
+            <li>
+              <a href="#rechte">Ihre Rechte</a>
+            </li>
+
+            <li>
+              <a href="#beschwerde">Beschwerderecht</a>
+            </li>
+
+            <li>
+              <a href="#sicherheit">Datensicherheit</a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Verantwortlicher -->
+        <article class="privacy-card" id="verantwortlicher">
+
+          <h2>1. Verantwortlicher</h2>
+
+          <p>
+            Verantwortlich für die Verarbeitung personenbezogener Daten
+            auf dieser Website ist:
+          </p>
+
+          <address>
+            <strong>Trattoria Del Corso</strong><br>
+            Geschäftsführung: G. Collo<br>
+            Steinstraße 50<br>
+            14776 Brandenburg an der Havel<br><br>
+
+            Telefon:
+            <a href="tel:+4933813279801">
+              +49 (0) 3381 – 3279801
+            </a><br>
+
+            E-Mail:
+            <a href="mailto:delcorso2013@gmail.com">
+              delcorso2013@gmail.com
+            </a>
+          </address>
+
+        </article>
+
+        <!-- Hosting -->
+        <article class="privacy-card" id="hosting">
+
+          <h2>2. Hosting und Server-Logdateien</h2>
+
+          <p>
+            Unsere Website wird bei einem externen Hosting-Anbieter
+            gespeichert und bereitgestellt.
+          </p>
+
+          <div class="highlight-box">
+            <strong>Hosting-Anbieter ergänzen:</strong><br>
+            Name des Hosting-Anbieters<br>
+            Anschrift des Hosting-Anbieters<br>
+            Datenschutzerklärung des Hosting-Anbieters
+          </div>
+
+          <p>
+            Beim Aufruf dieser Website kann der Hosting-Anbieter
+            automatisch technische Informationen in sogenannten
+            Server-Logdateien verarbeiten. Dazu können insbesondere
+            folgende Daten gehören:
+          </p>
+
+          <ul>
+            <li>IP-Adresse des verwendeten Geräts</li>
+            <li>Datum und Uhrzeit des Zugriffs</li>
+            <li>Aufgerufene Seite oder Datei</li>
+            <li>Übertragene Datenmenge</li>
+            <li>Verwendeter Browser und Betriebssystem</li>
+            <li>Referrer-URL</li>
+            <li>Hostname des zugreifenden Geräts</li>
+          </ul>
+
+          <p>
+            Die Verarbeitung erfolgt zur technisch fehlerfreien,
+            sicheren und stabilen Bereitstellung unserer Website.
+            Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO.
+            Unser berechtigtes Interesse liegt in der sicheren und
+            zuverlässigen Bereitstellung unseres Internetauftritts.
+          </p>
+
+          <p>
+            Die Daten werden gelöscht, sobald sie für die genannten
+            Zwecke nicht mehr benötigt werden, sofern keine gesetzlichen
+            Aufbewahrungspflichten entgegenstehen.
+          </p>
+
+        </article>
+
+        <!-- Kontaktaufnahme -->
+        <article class="privacy-card" id="kontakt">
+
+          <h2>3. Kontaktaufnahme per Telefon oder E-Mail</h2>
+
+          <p>
+            Wenn Sie uns per Telefon oder E-Mail kontaktieren,
+            verarbeiten wir die von Ihnen übermittelten Angaben.
+            Dazu können insbesondere Ihr Name, Ihre E-Mail-Adresse,
+            Ihre Telefonnummer und der Inhalt Ihrer Nachricht gehören.
+          </p>
+
+          <p>
+            Die Verarbeitung erfolgt, um Ihre Anfrage zu bearbeiten
+            und mit Ihnen Kontakt aufzunehmen.
+          </p>
+
+          <p>
+            Soweit Ihre Anfrage auf den Abschluss oder die Durchführung
+            eines Vertrags gerichtet ist, erfolgt die Verarbeitung auf
+            Grundlage von Art. 6 Abs. 1 lit. b DSGVO. In allen anderen
+            Fällen erfolgt sie auf Grundlage unseres berechtigten
+            Interesses an der Bearbeitung von Anfragen gemäß
+            Art. 6 Abs. 1 lit. f DSGVO.
+          </p>
+
+          <p>
+            Die Daten werden gelöscht, sobald Ihre Anfrage abschließend
+            bearbeitet wurde und keine gesetzlichen Aufbewahrungspflichten
+            entgegenstehen.
+          </p>
+
+          <div class="highlight-box">
+            Bitte beachten Sie, dass eine normale E-Mail-Kommunikation
+            Sicherheitsrisiken haben kann. Senden Sie daher keine
+            besonders sensiblen Informationen unverschlüsselt per E-Mail.
+          </div>
+
+        </article>
+
+        <!-- Kontaktformular -->
+        <article class="privacy-card" id="formular">
+
+          <h2>4. Kontaktformular</h2>
+
+          <p>
+            Wenn Sie unser Kontaktformular nutzen, verarbeiten wir die
+            von Ihnen eingegebenen Daten. Je nach Formular können dazu
+            folgende Angaben gehören:
+          </p>
+
+          <ul>
+            <li>Vorname und Nachname</li>
+            <li>E-Mail-Adresse</li>
+            <li>Telefonnummer</li>
+            <li>Betreff und Inhalt der Nachricht</li>
+            <li>Zeitpunkt der Übermittlung</li>
+          </ul>
+
+          <p>
+            Pflichtfelder sind erforderlich, damit wir Ihre Anfrage
+            bearbeiten können. Freiwillige Angaben helfen uns dabei,
+            Ihre Anfrage schneller zuzuordnen.
+          </p>
+
+          <p>
+            Die Rechtsgrundlage richtet sich nach dem Inhalt Ihrer
+            Anfrage. Bei vertraglichen oder vorvertraglichen Anfragen
+            ist dies Art. 6 Abs. 1 lit. b DSGVO. In sonstigen Fällen
+            erfolgt die Verarbeitung auf Grundlage von
+            Art. 6 Abs. 1 lit. f DSGVO.
+          </p>
+
+          <p>
+            Sofern das Formular über einen externen Formulardienst
+            versendet wird, muss dieser Anbieter hier zusätzlich
+            genannt werden.
+          </p>
+
+          <div class="highlight-box">
+            Aktuell steht in deinem Formular noch
+            <strong>action="#"</strong>. Dadurch wird noch keine
+            Nachricht an einen externen Anbieter verschickt.
+            Sobald du einen Formulardienst einbaust, muss diese
+            Datenschutzerklärung angepasst werden.
+          </div>
+
+        </article>
+
+        <!-- Google Fonts -->
+        <article class="privacy-card" id="fonts">
+
+          <h2>5. Google Fonts</h2>
+
+          <p>
+            Auf unserer Website werden Schriftarten von Google Fonts
+            verwendet. Die Schriftarten werden aktuell über Server von
+            Google geladen.
+          </p>
+
+          <p>
+            Beim Aufruf einer Seite kann der Browser eine Verbindung zu
+            Servern von Google herstellen. Dabei können technische Daten,
+            insbesondere die IP-Adresse und Browserinformationen,
+            an Google übermittelt werden.
+          </p>
+
+          <p>
+            Anbieter ist:
+          </p>
+
+          <address>
+            Google Ireland Limited<br>
+            Gordon House<br>
+            Barrow Street<br>
+            Dublin 4<br>
+            Irland
+          </address>
+
+          <p>
+            Die Verwendung erfolgt zur einheitlichen und ansprechenden
+            Darstellung unserer Website. Als Rechtsgrundlage kommt
+            Art. 6 Abs. 1 lit. f DSGVO in Betracht, soweit die Nutzung
+            ohne Einwilligung rechtlich zulässig ist.
+          </p>
+
+          <div class="highlight-box">
+            <strong>Empfehlung:</strong>
+            Speichere die Schriftdateien lokal auf deinem eigenen Server.
+            Dann muss beim Laden der Schrift keine Verbindung zu
+            Google hergestellt werden und dieser Abschnitt kann
+            entsprechend angepasst werden.
+          </div>
+
+        </article>
+
+        <!-- Cookies -->
+        <article class="privacy-card" id="cookies">
+
+          <h2>6. Cookies und ähnliche Technologien</h2>
+
+          <p>
+            Nach aktuellem Stand verwendet diese Website keine
+            Analyse-, Marketing- oder Tracking-Cookies.
+          </p>
+
+          <p>
+            Technisch notwendige Cookies oder lokale Speicherfunktionen
+            dürfen eingesetzt werden, soweit sie erforderlich sind,
+            um einen ausdrücklich gewünschten Dienst bereitzustellen.
+          </p>
+
+          <p>
+            Sollten zukünftig Analyse-, Werbe- oder andere nicht
+            notwendige Cookies verwendet werden, werden wir vor deren
+            Speicherung eine entsprechende Einwilligung einholen und
+            diese Datenschutzerklärung anpassen.
+          </p>
+
+        </article>
+
+        <!-- Externe Links -->
+        <article class="privacy-card" id="links">
+
+          <h2>7. Externe Links und Routenplanung</h2>
+
+          <p>
+            Unsere Website kann Links zu externen Internetseiten
+            enthalten, beispielsweise zu Google Maps oder anderen
+            Angeboten Dritter.
+          </p>
+
+          <p>
+            Solange Sie einen externen Link nicht anklicken, wird durch
+            den Link allein grundsätzlich keine Verbindung zur externen
+            Seite hergestellt. Nach dem Anklicken gelten die
+            Datenschutzbestimmungen des jeweiligen Anbieters.
+          </p>
+
+          <p>
+            Wir haben keinen Einfluss darauf, welche personenbezogenen
+            Daten externe Anbieter nach dem Aufruf ihrer Seiten
+            verarbeiten.
+          </p>
+
+        </article>
+
+        <!-- Speicherdauer -->
+        <article class="privacy-card">
+
+          <h2>8. Speicherdauer</h2>
+
+          <p>
+            Personenbezogene Daten werden nur so lange gespeichert,
+            wie dies für den jeweiligen Zweck erforderlich ist.
+          </p>
+
+          <p>
+            Eine längere Speicherung kann erfolgen, wenn gesetzliche
+            Aufbewahrungspflichten bestehen oder die Daten zur
+            Geltendmachung, Ausübung oder Verteidigung von
+            Rechtsansprüchen benötigt werden.
+          </p>
+
+        </article>
+
+        <!-- Empfänger -->
+        <article class="privacy-card">
+
+          <h2>9. Empfänger personenbezogener Daten</h2>
+
+          <p>
+            Personenbezogene Daten werden grundsätzlich nicht an Dritte
+            weitergegeben, sofern dies nicht für die Bearbeitung Ihrer
+            Anfrage, die Erfüllung eines Vertrags, die technische
+            Bereitstellung der Website oder aufgrund einer gesetzlichen
+            Verpflichtung erforderlich ist.
+          </p>
+
+          <p>
+            Mögliche Empfänger können Hosting-Anbieter,
+            E-Mail-Anbieter, technische Dienstleister oder Behörden sein.
+          </p>
+
+          <p>
+            Soweit Dienstleister personenbezogene Daten in unserem
+            Auftrag verarbeiten, werden erforderlichenfalls Verträge
+            zur Auftragsverarbeitung abgeschlossen.
+          </p>
+
+        </article>
+
+        <!-- Rechte -->
+        <article class="privacy-card" id="rechte">
+
+          <h2>10. Ihre Datenschutzrechte</h2>
+
+          <p>
+            Ihnen stehen im Rahmen der gesetzlichen Voraussetzungen
+            insbesondere folgende Rechte zu:
+          </p>
+
+          <ul>
+            <li>
+              Recht auf Auskunft über die verarbeiteten Daten
+              gemäß Art. 15 DSGVO
+            </li>
+
+            <li>
+              Recht auf Berichtigung unrichtiger Daten
+              gemäß Art. 16 DSGVO
+            </li>
+
+            <li>
+              Recht auf Löschung Ihrer Daten
+              gemäß Art. 17 DSGVO
+            </li>
+
+            <li>
+              Recht auf Einschränkung der Verarbeitung
+              gemäß Art. 18 DSGVO
+            </li>
+
+            <li>
+              Recht auf Datenübertragbarkeit
+              gemäß Art. 20 DSGVO
+            </li>
+
+            <li>
+              Recht auf Widerspruch gegen bestimmte Verarbeitungen
+              gemäß Art. 21 DSGVO
+            </li>
+
+            <li>
+              Recht auf Widerruf einer erteilten Einwilligung
+              mit Wirkung für die Zukunft
+            </li>
+          </ul>
+
+          <p>
+            Zur Ausübung Ihrer Rechte können Sie sich jederzeit an uns
+            wenden:
+          </p>
+
+          <p>
+            <a href="mailto:delcorso2013@gmail.com">
+              delcorso2013@gmail.com
+            </a>
+          </p>
+
+        </article>
+
+        <!-- Widerspruch -->
+        <article class="privacy-card">
+
+          <h2>11. Widerspruchsrecht</h2>
+
+          <p>
+            Wenn wir personenbezogene Daten auf Grundlage von
+            Art. 6 Abs. 1 lit. f DSGVO verarbeiten, haben Sie das Recht,
+            aus Gründen, die sich aus Ihrer besonderen Situation ergeben,
+            jederzeit gegen diese Verarbeitung Widerspruch einzulegen.
+          </p>
+
+          <p>
+            Wir verarbeiten die betroffenen Daten anschließend nicht mehr,
+            sofern wir keine zwingenden schutzwürdigen Gründe für die
+            Verarbeitung nachweisen können oder die Verarbeitung der
+            Geltendmachung, Ausübung oder Verteidigung von
+            Rechtsansprüchen dient.
+          </p>
+
+        </article>
+
+        <!-- Beschwerde -->
+        <article class="privacy-card" id="beschwerde">
+
+          <h2>12. Beschwerderecht bei der Aufsichtsbehörde</h2>
+
+          <p>
+            Sie haben das Recht, sich bei einer Datenschutzaufsichtsbehörde
+            zu beschweren, wenn Sie der Ansicht sind, dass die Verarbeitung
+            Ihrer personenbezogenen Daten gegen Datenschutzrecht verstößt.
+          </p>
+
+          <p>
+            Für Unternehmen mit Sitz in Brandenburg ist insbesondere
+            folgende Aufsichtsbehörde zuständig:
+          </p>
+
+          <address>
+            <strong>
+              Die Landesbeauftragte für den Datenschutz und für das
+              Recht auf Akteneinsicht Brandenburg
+            </strong><br>
+
+            Stahnsdorfer Damm 77<br>
+            14532 Kleinmachnow<br><br>
+
+            Telefon: 033203 356-0<br>
+            Fax: 033203 356-49<br>
+
+            E-Mail:
+            <a href="mailto:Poststelle@LDA.Brandenburg.de">
+              Poststelle@LDA.Brandenburg.de
+            </a><br>
+
+            Website:
+            <a
+              href="https://www.lda.brandenburg.de"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              www.lda.brandenburg.de
+            </a>
+          </address>
+
+        </article>
+
+        <!-- Sicherheit -->
+        <article class="privacy-card" id="sicherheit">
+
+          <h2>13. SSL- beziehungsweise TLS-Verschlüsselung</h2>
+
+          <p>
+            Diese Website sollte aus Sicherheitsgründen und zum Schutz
+            vertraulicher Inhalte über eine verschlüsselte
+            HTTPS-Verbindung bereitgestellt werden.
+          </p>
+
+          <p>
+            Eine verschlüsselte Verbindung erkennen Sie in der Regel
+            daran, dass die Adresse der Website mit
+            <strong>https://</strong> beginnt und im Browser ein
+            Schloss-Symbol angezeigt wird.
+          </p>
+
+        </article>
+
+        <!-- Automatisierte Entscheidungen -->
+        <article class="privacy-card">
+
+          <h2>14. Automatisierte Entscheidungen</h2>
+
+          <p>
+            Eine ausschließlich automatisierte Entscheidungsfindung
+            einschließlich Profiling findet über diese Website nach
+            aktuellem Stand nicht statt.
+          </p>
+
+        </article>
+
+        <!-- Änderungen -->
+        <article class="privacy-card">
+
+          <h2>15. Änderung dieser Datenschutzerklärung</h2>
+
+          <p>
+            Wir behalten uns vor, diese Datenschutzerklärung anzupassen,
+            wenn sich gesetzliche Vorgaben, unsere Website oder die von
+            uns eingesetzten Dienste ändern.
+          </p>
+
+          <p>
+            Es gilt die jeweils auf dieser Website veröffentlichte
+            aktuelle Fassung.
+          </p>
+
+        </article>
+
+        <p class="last-updated">
+          Stand: Juli 2026
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+
+    <div class="footer-content">
+
+      <p class="footer-title">
+        Trattoria Del Corso
+      </p>
+
+      <p>
+        &copy; 2026 Trattoria Del Corso. Alle Rechte vorbehalten.
+      </p>
+
+      <div class="footer-links">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </div>
+
+    </div>
+
+  </footer>
+
+  <script>
+    const header = document.getElementById("header");
+    const burger = document.getElementById("burger");
+    const navLinks = document.getElementById("nav-links");
+    const menuLinks = navLinks.querySelectorAll("a");
+
+    function checkScroll() {
+      if (window.scrollY > 40) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+    }
+
+    checkScroll();
+
+    window.addEventListener("scroll", checkScroll);
+
+    burger.addEventListener("click", function () {
+      navLinks.classList.toggle("open");
+
+      const menuIsOpen = navLinks.classList.contains("open");
+
+      burger.setAttribute("aria-expanded", menuIsOpen);
+    });
+
+    menuLinks.forEach(function (link) {
+      link.addEventListener("click", function () {
+        navLinks.classList.remove("open");
+        burger.setAttribute("aria-expanded", "false");
+      });
+    });
+  </script>
+
+</body>
+</html>

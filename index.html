@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <!-- Zeichensatz UTF-8 = Umlaute (ä, ö, ü) werden korrekt angezeigt -->
+  <meta charset="UTF-8" />
+
+  <!-- Damit die Seite auf Handys richtig skaliert wird -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Kurze Beschreibung für Google -->
+  <meta name="description" content="Trattoria Del Corso - Italienische Küche in Brandenburg" />
+
+  <!-- Titel im Browser-Tab -->
+  <title>Trattoria Del Corso - Ein Stück Sizilien in Brandenburg</title>
+
+  <!-- Google Fonts einbinden (elegante Schriftarten für ein Restaurant) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Great+Vibes&family=Lato:wght@300;400;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Unsere eigene CSS-Datei einbinden -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ============================================= -->
+  <!-- NAVIGATION (oben, bleibt beim Scrollen sichtbar) -->
+  <!-- ============================================= -->
+  <header class="header" id="header">
+    <nav class="nav">
+      <!-- Logo / Name links -->
+      <a href="#home" class="logo">Trattoria Del Corso</a>
+
+      <!-- Burger-Button, nur auf dem Handy sichtbar -->
+      <button class="burger" id="burger" aria-label="Menü öffnen">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Menülinks. Href #home springt zum Element mit id="home" -->
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#willkommen">Willkommen</a></li>
+        <li><a href="#menu">Menü</a></li>
+        <li><a href="#galerie">Galerie</a></li>
+        <li><a href="/kontakt.html">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ============================================= -->
+  <!-- HERO: großes Bild ganz oben mit Titel        -->
+  <!-- ============================================= -->
+  <section class="hero" id="home">
+    <!-- Dunkle Ebene über dem Bild, damit die Schrift lesbar bleibt -->
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <p class="hero-sub">Benvenuti</p>
+      <h1 class="hero-title">Trattoria Del Corso</h1>
+      <p class="hero-text">Ein Stück Sizilien im Herzen Brandenburgs</p>
+      <a href="#menu" class="btn">Unser Menü</a>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- WILLKOMMEN: Text links, Bild rechts          -->
+  <!-- ============================================= -->
+  <section class="section willkommen" id="willkommen">
+    <div class="container two-col">
+      <div class="col-text">
+        <p class="script">Willkommen</p>
+        <h2>Authentische italienische Küche</h2>
+        <p>
+          Bei uns erleben Sie die Wärme Süditaliens: traditionelle Rezepte,
+          frische Zutaten und Gastfreundschaft wie zu Hause bei Nonna.
+        </p>
+        <p>
+          Von handgemachter Pasta bis zur knusprigen Pizza aus dem Steinofen –
+          jedes Gericht wird mit Liebe zubereitet.
+        </p>
+      </div>
+      <div class="col-image">
+        <!-- alt = Text falls das Bild nicht lädt (wichtig für Barrierefreiheit) -->
+        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=800"
+             alt="Traditionelle italienische Pizza" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+<!-- MENÜ                                          -->
+<!-- ============================================= -->
+<section class="section menu" id="menu">
+
+  <div class="menu-decoration menu-decoration-one"></div>
+  <div class="menu-decoration menu-decoration-two"></div>
+
+  <div class="container">
+
+    <p class="script center">La Carta</p>
+    <h2 class="center menu-main-title">Unsere Spezialitäten</h2>
+
+    <p class="menu-intro">
+      Italienische Klassiker, hausgemachte Pasta und knusprige Pizza –
+      frisch zubereitet und mit Liebe serviert.
+    </p>
+
+    <!-- ========================================= -->
+    <!-- VORSPEISEN                                -->
+    <!-- ========================================= -->
+
+    <div class="menu-category">
+
+      <div class="category-heading">
+        <div>
+          <p class="category-small">Per cominciare</p>
+          <h3>Vorspeisen</h3>
+        </div>
+
+        <span class="category-number">01</span>
+      </div>
+
+      <div class="food-grid">
+
+        <article class="food-card featured-card">
+
+          <div class="food-image">
+            <img
+              src="/images/bruschetta.jpg"
+              alt="Frische Bruschetta mit Tomaten und Basilikum"
+            >
+
+            <span class="food-badge">Empfehlung</span>
+          </div>
+
+          <div class="food-content">
+            <div class="food-title-row">
+              <h4>Bruschetta alla Romana</h4>
+              <span class="food-price">6,50 €</span>
+            </div>
+
+            <p>
+              Vier knusprige Bruschetta mit Tomatenwürfeln, Zwiebeln,
+              Knoblauch und frischem Basilikum.
+            </p>
+
+            <div class="food-tags">
+              <span>Vegetarisch</span>
+              <span>Hausgemacht</span>
+            </div>
+          </div>
+
+        </article>
+
+        <article class="food-card">
+
+          <div class="food-content">
+            <div class="food-title-row">
+              <h4>Brokkolisuppe</h4>
+              <span class="food-price">6,50 €</span>
+            </div>
+
+            <p>
+              Cremige Brokkolisuppe mit feinen Kräutern.
+            </p>
+
+            <div class="food-tags">
+              <span>Vegetarisch</span>
+            </div>
+          </div>
+
+        </article>
+
+        <article class="food-card">
+
+          <div class="food-content">
+            <div class="food-title-row">
+              <h4>Knoblauchcremesuppe</h4>
+              <span class="food-price">6,50 €</span>
+            </div>
+
+            <p>
+              Würzige Cremesuppe mit aromatischem Knoblauch.
+            </p>
+
+            <div class="food-tags">
+              <span>Vegetarisch</span>
+            </div>
+          </div>
+
+        </article>
+
+        <article class="food-card">
+
+          <div class="food-content">
+            <div class="food-title-row">
+              <h4>Tomatensuppe mit Schweinefleisch</h4>
+              <span class="food-price">6,10 €</span>
+            </div>
+
+            <p>
+              Hausgemachte Tomatensuppe mit angebratenem Schweinefleisch.
+            </p>
+          </div>
+
+        </article>
+
+        <article class="food-card">
+
+          <div class="food-content">
+            <div class="food-title-row">
+              <h4>Bruschetta Classico</h4>
+              <span class="food-price">1,90 €</span>
+            </div>
+
+            <p>
+              Eine Scheibe mit Tomaten, Zwiebeln, Knoblauch und Basilikum.
+            </p>
+
+            <div class="food-tags">
+              <span>Vegan</span>
+              <span>Vegetarisch</span>
+            </div>
+          </div>
+
+        </article>
+
+      </div>
+
+    </div>
+
+    <!-- ========================================= -->
+    <!-- SALATE                                    -->
+    <!-- ========================================= -->
+
+    <div class="menu-category">
+
+      <div class="category-heading">
+        <div>
+          <p class="category-small">Fresco e leggero</p>
+          <h3>Salate</h3>
+        </div>
+
+        <span class="category-number">02</span>
+      </div>
+
+      <p class="category-description">
+        Alle Salate werden mit unserer hausgemachten Vinaigrette serviert.
+      </p>
+
+      <div class="food-grid">
+
+        <article class="food-card">
+
+          <div class="food-content">
+            <div class="food-title-row">
+              <h4>Insalata di Costa</h4>
+              <span class="food-price">11,50 €</span>
+            </div>
+
+            <p>
+              Gemischter Salat mit Schinken, Ei und Mais.
+            </p>
+          </div>
+
+        </article>
+
+        <article class="food-card">
+
+          <div class="food-content">
+            <div class="food-title-row">
+              <h4>Insalata di Pollo</h4>
+              <span class="food-price">11,90 €</span>
+            </div>
+
+            <p>
+              Gemischter Salat mit saftigen Hähnchenstreifen.
+            </p>
+          </div>
+
+        </article>
+
+        <article class="food-card">
+
+          <div class="food-content">
+            <div class="food-title-row">
+              <h4>Insalata alla Calabrese</h4>
+              <span class="food-price">11,50 €</span>
+            </div>
+
+            <p>
+              Mit getrockneten Tomaten, Oliven und Schafskäse.
+            </p>
+
+            <div class="food-tags">
+              <span>Vegetarisch</span>
+            </div>
+          </div>
+
+        </article>
+
+        <article class="food-card">
+
+          <div class="food-content">
+            <div class="food-title-row">
+              <h4>Insalata di Verdure</h4>
+              <span class="food-price">11,90 €</span>
+            </div>
+
+            <p>
+              Mit gegrilltem und mariniertem Gemüse.
+            </p>
+
+            <div class="food-tags">
+              <span>Vegan</span>
+              <span>Vegetarisch</span>
+            </div>
+          </div>
+
+        </article>
+
+      </div>
+
+    </div>
+
+    <!-- ========================================= -->
+    <!-- AUS DEM OFEN                              -->
+    <!-- ========================================= -->
+
+    <div class="menu-category">
+
+      <div class="category-heading">
+        <div>
+          <p class="category-small">Dal forno</p>
+          <h3>Aus dem Ofen</h3>
+        </div>
+
+        <span class="category-number">03</span>
+      </div>
+
+      <p class="category-description">
+        Alle Gerichte werden mit Mozzarella überbacken.
+      </p>
+
+      <div class="food-grid">
+
+        <article class="food-card featured-card">
+
+          <div class="food-image">
+            <img
+              src="/images/lasagne.jpg"
+              alt="Hausgemachte italienische Lasagne"
+            >
+
+            <span class="food-badge">Klassiker</span>
+          </div>
+
+          <div class="food-content">
+            <div class="food-title-row">
+              <h4>Lasagne Classico</h4>
+              <span class="food-price">13,90 €</span>
+            </div>
+
+            <p>
+              Hausgemachte Lasagne mit kräftiger Hackfleischsauce.
+            </p>
+          </div>
+
+        </article>
+
+        <article class="food-card">
+
+          <div class="food-content">
+            <div class="food-title-row">
+              <h4>Rigatoni Pollo Funghi al Forno</h4>
+              <span class="food-price">13,90 €</span>
+            </div>
+
+            <p>
+              Kurze Nudeln mit Hähnchen und Champignons in Rahmsauce.
+            </p>
+          </div>
+
+        </article>
+
+        <article class="food-card">
+
+          <div class="food-content">
+            <div class="food-title-row">
+              <h4>Tortellini Prosciutto Panna al Forno</h4>
+              <span class="food-price">13,90 €</span>
+            </div>
+
+            <p>
+              Tortellini mit Schinken in cremiger Sahnesauce.
+            </p>
+          </div>
+
+        </article>
+
+        <article class="food-card">
+
+          <div class="food-content">
+            <div class="food-title-row">
+              <h4>Gnocchi Spinaci Gorgonzola al Forno</h4>
+              <span class="food-price">13,90 €</span>
+            </div>
+
+            <p>
+              Kartoffelnudeln mit Blattspinat und Gorgonzola.
+            </p>
+
+            <div class="food-tags">
+              <span>Vegetarisch</span>
+            </div>
+          </div>
+
+        </article>
+
+      </div>
+
+    </div>
+
+    <!-- ========================================= -->
+    <!-- PASTA                                     -->
+    <!-- ========================================= -->
+
+    <div class="menu-category">
+
+      <div class="category-heading">
+        <div>
+          <p class="category-small">Pasta italiana</p>
+          <h3>Pasta</h3>
+        </div>
+
+        <span class="category-number">04</span>
+      </div>
+
+      <p class="category-description">
+        Alle Pastagerichte werden mit Parmesan serviert.
+      </p>
+
+      <div class="food-grid">
+
+        <article class="food-card featured-card">
+
+          <div class="food-image">
+            <img
+              src="/images/pasta.jpg"
+              alt="Italienische Pasta mit frischen Zutaten"
+            >
+
+            <span class="food-badge">Beliebt</span>
+          </div>
+
+          <div class="food-content">
+            <div class="food-title-row">
+              <h4>Linguine alla Carbonara</h4>
+              <span class="food-price">12,40 €</span>
+            </div>
+
+            <p>
+              Feine Pasta mit Ei und Bacon beziehungsweise Speck.
+            </p>
+          </div>
+
+        </article>
+
+        <article class="food-card">
+
+          <div class="food-content">
+            <div class="food-title-row">
+              <h4>Linguine Aglio Olio Peperoncino</h4>
+              <span class="food-price">12,40 €</span>
+            </div>
+
+            <p>
+              Mit Knoblauch und scharfem Peperoncino in Olivenöl.
+            </p>
+
+            <div class="food-tags">
+              <span class="spicy">Scharf</span>
+            </div>
+          </div>
+
+        </article>
+
+        <article class="food-card">
+
+          <div class="food-content">
+            <div class="food-title-row">
+              <h4>Linguine con Verdure</h4>
+              <span class="food-price">13,90 €</span>
+            </div>
+
+            <p>
+              Mit verschiedenem Gemüse in hausgemachter Tomatensauce.
+            </p>
+
+            <div class="food-tags">
+              <span>Vegetarisch</span>
+            </div>
+          </div>
+
+        </article>
+
+        <article class="food-card">
+          <div class="food-content">
+            <div class="food-title-row">
+              <h4>Rigatoni Pollo Funghi</h4>
+              <span class="food-price">13,90 €</span>
+            </div>
+
+            <p>
+              Rigatoni mit Hähnchen und Champignons in Rahmsauce.
+            </p>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <div class="food-content">
+            <div class="food-title-row">
+              <h4>Rigatoni Pollo e Formaggio</h4>
+              <span class="food-price">13,90 €</span>
+            </div>
+
+            <p>
+              Mit frischem Hähnchen und verschiedenen Käsesorten.
+            </p>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <div class="food-content">
+            <div class="food-title-row">
+              <h4>Rigatoni Siciliana con Pollo</h4>
+              <span class="food-price">13,90 €</span>
+            </div>
+
+            <p>
+              Mit Hähnchen, Oliven, Kapern und getrockneten Tomaten.
+            </p>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <div class="food-content">
+            <div class="food-title-row">
+              <h4>Rigatoni Manzo e Verdure</h4>
+              <span class="food-price">14,20 €</span>
+            </div>
+
+            <p>
+              Mit Rindfleisch und Gemüse in Tomatensauce.
+            </p>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <div class="food-content">
+            <div class="food-title-row">
+              <h4>Rigatoni Tonno</h4>
+              <span class="food-price">13,90 €</span>
+            </div>
+
+            <p>
+              Mit Thunfisch, Oliven und Kapern in Tomatensauce.
+            </p>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <div class="food-content">
+            <div class="food-title-row">
+              <h4>Tagliatelle con Fegato</h4>
+              <span class="food-price">13,90 €</span>
+            </div>
+
+            <p>
+              Feine Bandnudeln mit Kalbsleber und Gemüse.
+            </p>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <div class="food-content">
+            <div class="food-title-row">
+              <h4>Tagliatelle al Verdure</h4>
+              <span class="food-price">13,90 €</span>
+            </div>
+
+            <p>
+              Bandnudeln mit Gemüse in Tomatensauce.
+            </p>
+
+            <div class="food-tags">
+              <span>Vegetarisch</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <div class="food-content">
+            <div class="food-title-row">
+              <h4>Tagliatelle Pollo Canterelli</h4>
+              <span class="food-price">13,90 €</span>
+            </div>
+
+            <p>
+              Bandnudeln mit Hähnchen und Pfifferlingen in Rahmsauce.
+            </p>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <div class="food-content">
+            <div class="food-title-row">
+              <h4>Tagliatelle Pollo Curry</h4>
+              <span class="food-price">13,90 €</span>
+            </div>
+
+            <p>
+              Bandnudeln mit Hähnchen in Currysauce.
+            </p>
+
+            <div class="food-tags">
+              <span class="spicy">Scharf</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <div class="food-content">
+            <div class="food-title-row">
+              <h4>Pappardelle Spinaci e Gorgonzola</h4>
+              <span class="food-price">13,90 €</span>
+            </div>
+
+            <p>
+              Breite Bandnudeln mit Blattspinat und Gorgonzola.
+            </p>
+
+            <div class="food-tags">
+              <span>Vegetarisch</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <div class="food-content">
+            <div class="food-title-row">
+              <h4>Gnocchi 4 Formaggio</h4>
+              <span class="food-price">12,90 €</span>
+            </div>
+
+            <p>
+              Hausgemachte Kartoffelnudeln in cremiger Käsesauce.
+            </p>
+
+            <div class="food-tags">
+              <span>Vegetarisch</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <div class="food-content">
+            <div class="food-title-row">
+              <h4>Gnocchi Pollo e Curry</h4>
+              <span class="food-price">13,90 €</span>
+            </div>
+
+            <p>
+              Kartoffelnudeln mit Hähnchen in Currysauce.
+            </p>
+
+            <div class="food-tags">
+              <span class="spicy">Scharf</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <div class="food-content">
+            <div class="food-title-row">
+              <h4>Gnocchi Verdure Manzo</h4>
+              <span class="food-price">14,20 €</span>
+            </div>
+
+            <p>
+              Kartoffelnudeln mit Gemüse und Rindfleisch.
+            </p>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+
+    <!-- ========================================= -->
+    <!-- PIZZA MIT GROSSEM SALAMI-BILD             -->
+    <!-- ========================================= -->
+
+    <div class="menu-category pizza-category">
+
+      <div class="pizza-banner">
+
+        <img
+          src="/images/salami.jpg"
+          alt="Italienische Salami und Pizza"
+        >
+
+        <div class="pizza-banner-overlay"></div>
+
+        <div class="pizza-banner-content">
+          <p>Direttamente dall'Italia</p>
+          <h3>Pizza aus echter Handarbeit</h3>
+
+          <span>
+            Frischer Teig, aromatische Tomatensauce und beste Zutaten.
+          </span>
+        </div>
+
+      </div>
+
+      <div class="category-heading">
+        <div>
+          <p class="category-small">La nostra pizza</p>
+          <h3>Pizza</h3>
+        </div>
+
+        <span class="category-number">05</span>
+      </div>
+
+      <p class="category-description">
+        Unsere Pizzen sind etwa 31–33 cm groß und werden von Hand geformt.
+      </p>
+
+      <div class="food-grid">
+
+        <article class="food-card featured-card">
+
+          <div class="food-image">
+            <img
+              src="/images/pizzaMenu.jpg"
+              alt="Frisch gebackene italienische Pizza"
+            >
+
+            <span class="food-badge">Bestseller</span>
+          </div>
+
+          <div class="food-content">
+            <div class="food-title-row">
+              <h4>Pizza Salumi Misto</h4>
+              <span class="food-price">14,90 €</span>
+            </div>
+
+            <p>
+              Mit Kochschinken, Salami, Champignons, Zwiebeln,
+              Paprika und Parmaschinken.
+            </p>
+          </div>
+
+        </article>
+
+        <article class="food-card">
+          <div class="food-content">
+            <div class="food-title-row">
+              <h4>Pizza Pollo Curry Brokkoli</h4>
+              <span class="food-price">13,90 €</span>
+            </div>
+
+            <p>Mit Hähnchen, Brokkoli und Curry.</p>
+
+            <div class="food-tags">
+              <span class="spicy">Scharf</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <div class="food-content">
+            <div class="food-title-row">
+              <h4>Pizza Cosa Nostra</h4>
+              <span class="food-price">13,20 €</span>
+            </div>
+
+            <p>Mit Zwiebeln und scharfer italienischer Salami.</p>
+
+            <div class="food-tags">
+              <span class="spicy">Scharf</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <div class="food-content">
+            <div class="food-title-row">
+              <h4>Pizza Spinaci Gorgonzola</h4>
+              <span class="food-price">13,90 €</span>
+            </div>
+
+            <p>Mit Spinat und Gorgonzola.</p>
+
+            <div class="food-tags">
+              <span>Vegetarisch</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <div class="food-content">
+            <div class="food-title-row">
+              <h4>Pizza Hawaii</h4>
+              <span class="food-price">12,90 €</span>
+            </div>
+
+            <p>Mit Kochschinken und Ananas.</p>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <div class="food-content">
+            <div class="food-title-row">
+              <h4>Pizza Sicilia</h4>
+              <span class="food-price">13,50 €</span>
+            </div>
+
+            <p>Mit Oliven, Kapern, Sardellen und Thunfisch.</p>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <div class="food-content">
+            <div class="food-title-row">
+              <h4>Pizza Costa</h4>
+              <span class="food-price">13,50 €</span>
+            </div>
+
+            <p>Mit Kochschinken, Brokkoli und Mais.</p>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <div class="food-content">
+            <div class="food-title-row">
+              <h4>Pizza Parma</h4>
+              <span class="food-price">14,10 €</span>
+            </div>
+
+            <p>Mit Parmaschinken, Rucola und Parmesanflocken.</p>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <div class="food-content">
+            <div class="food-title-row">
+              <h4>Pizza Funghi</h4>
+              <span class="food-price">12,50 €</span>
+            </div>
+
+            <p>Mit frischen Champignons.</p>
+
+            <div class="food-tags">
+              <span>Vegetarisch</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <div class="food-content">
+            <div class="food-title-row">
+              <h4>Pizza Mista</h4>
+              <span class="food-price">13,20 €</span>
+            </div>
+
+            <p>Mit Salami, Kochschinken und Champignons.</p>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <div class="food-content">
+            <div class="food-title-row">
+              <h4>Pizza Calzone</h4>
+              <span class="food-price">14,90 €</span>
+            </div>
+
+            <p>Mit Salami, Kochschinken, Zwiebeln und Champignons.</p>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <div class="food-content">
+            <div class="food-title-row">
+              <h4>Pizza Vegetariana</h4>
+              <span class="food-price">13,90 €</span>
+            </div>
+
+            <p>
+              Mit gegrilltem Gemüse, Rucola und Parmesanflocken.
+            </p>
+
+            <div class="food-tags">
+              <span>Vegetarisch</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <div class="food-content">
+            <div class="food-title-row">
+              <h4>Pizza 4 Formaggio</h4>
+              <span class="food-price">13,90 €</span>
+            </div>
+
+            <p>
+              Mit Mozzarella, Gorgonzola, Schafskäse und Parmesan.
+            </p>
+
+            <div class="food-tags">
+              <span>Vegetarisch</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+
+    <!-- ========================================= -->
+    <!-- HÄHNCHENGERICHTE                          -->
+    <!-- ========================================= -->
+
+    <div class="menu-category">
+
+      <div class="category-heading">
+        <div>
+          <p class="category-small">Secondi piatti</p>
+          <h3>Hähnchengerichte</h3>
+        </div>
+
+        <span class="category-number">06</span>
+      </div>
+
+      <p class="category-description">
+        Alle Hähnchengerichte werden mit Kartoffeln und Gemüse serviert.
+      </p>
+
+      <div class="food-grid">
+
+        <article class="food-card">
+          <div class="food-content">
+            <div class="food-title-row">
+              <h4>Pollo ai Funghi</h4>
+              <span class="food-price">14,20 €</span>
+            </div>
+
+            <p>Hähnchenbrustfilet mit Champignons in Rahmsauce.</p>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <div class="food-content">
+            <div class="food-title-row">
+              <h4>Pollo al Limone</h4>
+              <span class="food-price">14,20 €</span>
+            </div>
+
+            <p>Hähnchenbrustfilet in leichter Zitronensauce.</p>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <div class="food-content">
+            <div class="food-title-row">
+              <h4>Pollo al Gorgonzola</h4>
+              <span class="food-price">14,20 €</span>
+            </div>
+
+            <p>Hähnchenbrustfilet in Gorgonzolasauce.</p>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <div class="food-content">
+            <div class="food-title-row">
+              <h4>Pollo ai Porcini</h4>
+              <span class="food-price">14,20 €</span>
+            </div>
+
+            <p>Hähnchenbrustfilet mit Steinpilzen in Rahmsauce.</p>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <div class="food-content">
+            <div class="food-title-row">
+              <h4>Pollo al Pepe Verde</h4>
+              <span class="food-price">14,20 €</span>
+            </div>
+
+            <p>Hähnchenbrustfilet in grüner Pfeffersauce.</p>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <div class="food-content">
+            <div class="food-title-row">
+              <h4>Pollo al Pomodoro</h4>
+              <span class="food-price">14,20 €</span>
+            </div>
+
+            <p>
+              In hausgemachter Tomatensauce mit Oliven und Kapern.
+            </p>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <div class="food-content">
+            <div class="food-title-row">
+              <h4>Pollo ai Curry</h4>
+              <span class="food-price">14,20 €</span>
+            </div>
+
+            <p>Hähnchenbrustfilet in Currysauce.</p>
+
+            <div class="food-tags">
+              <span class="spicy">Scharf</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <div class="food-content">
+            <div class="food-title-row">
+              <h4>Pollo al Canterelli</h4>
+              <span class="food-price">14,20 €</span>
+            </div>
+
+            <p>Hähnchenbrustfilet mit Pfifferlingen in Rahmsauce.</p>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+
+    <!-- ========================================= -->
+    <!-- SCHWEINEFLEISCH                           -->
+    <!-- ========================================= -->
+
+    <div class="menu-category">
+
+      <div class="category-heading">
+        <div>
+          <p class="category-small">Secondi di carne</p>
+          <h3>Schweinefleischgerichte</h3>
+        </div>
+
+        <span class="category-number">07</span>
+      </div>
+
+      <p class="category-description">
+        Alle Gerichte werden mit Kartoffeln und Gemüse serviert.
+      </p>
+
+      <div class="food-grid">
+
+        <article class="food-card">
+          <div class="food-content">
+            <div class="food-title-row">
+              <h4>Scaloppa al Gorgonzola</h4>
+              <span class="food-price">14,20 €</span>
+            </div>
+
+            <p>Schweinesteak mit cremiger Gorgonzolasauce.</p>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <div class="food-content">
+            <div class="food-title-row">
+              <h4>Scaloppa Porcini</h4>
+              <span class="food-price">14,20 €</span>
+            </div>
+
+            <p>Schweinesteak mit Steinpilzen in Rahmsauce.</p>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <div class="food-content">
+            <div class="food-title-row">
+              <h4>Scaloppa Pomodoro</h4>
+              <span class="food-price">14,20 €</span>
+            </div>
+
+            <p>
+              Mit hausgemachter Tomatensauce, Oliven und Kapern.
+            </p>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <div class="food-content">
+            <div class="food-title-row">
+              <h4>Scaloppa ai Funghi</h4>
+              <span class="food-price">14,20 €</span>
+            </div>
+
+            <p>Schweinesteak mit Champignons in Rahmsauce.</p>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+  <!-- ============================================= -->
+  <!-- GALERIE                                       -->
+  <!-- ============================================= -->
+  <section class="section galerie" id="galerie"">
+    <div class="container">
+      <p class="script center">Impressionen</p>
+      <h2 class="center">Galerie</h2>
+
+      <div class="gallery-grid">
+         <img src="/images/innen1.png" alt="Innen" />
+        <img src="/images/essen.jpg" alt="Gericht1" />
+        <img src="/images/wein.jpg" alt="Wein" />
+        <img src="/images/nudeln.jpg" alt="Gericht2" />
+        <img src="/images/pizza.jpg" alt="Gericht3" />
+        <img src="/images/terasse.png" alt="Terasse" />
+        <img src="/images/innen.png" alt="Innen" />
+        <img src="/images/baquete.jpg" alt="Gericht4" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!-- KONTAKT                                       -->
+  <!-- ============================================= -->
+  <section class="section kontakt" id="kontakt">
+    <div class="container center">
+      <p class="script">Besuchen Sie uns</p>
+      <h2>Kontakt</h2>
+      <p><strong>Adresse:</strong> Steinstraße 50, 14776 Brandenburg an der Havel</p>
+      <p><strong>Telefon:</strong> 0331 / 123 456</p>
+      <p><strong>Öffnungszeiten:</strong> Di–So 12:00 – 22:00 Uhr</p>
+      <a class="route" style="color: white;"
+        href="https://www.google.com/maps/place/Trattoria+Del+Corso/@52.4067352,12.5574264,17z/data=!3m1!4b1!4m6!3m5!1s0x47a8c0590a9b38e3:0x7ce6bd10c8890bc!8m2!3d52.4067352!4d12.5600013!16s%2Fg%2F11g9dpbc3q?entry=ttu&g_ep=EgoyMDI2MDcxNS4wIKXMDSoASAFQAw%3D%3D"
+        target="_blank"
+        rel="noopener noreferrer">
+              Route planen
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+
+    <div class="footer-content">
+
+      <p class="footer-title">
+        Trattoria Del Corso
+      </p>
+
+      <p>
+        &copy; 2026 Trattoria Del Corso. Alle Rechte vorbehalten.
+      </p>
+
+      <div class="footer-links">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </div>
+
+    </div>
+
+  </footer>
+
+  <!-- JavaScript ganz am Ende laden (Seite ist dann schon fertig) -->
+  <script src="script.js"></script>
+</body>
+</html>
